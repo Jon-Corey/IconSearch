@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/images/icon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icon-180.png">
+
+    <link rel="stylesheet" href="/assets/css/site.css">
+
+    <link rel="preconnect" href="/assets/data/override-tags.json" />
+    <link rel="preconnect" href="/assets/data/icons.json" />
+
+    <title>Icon Search: Find Tabler Icons</title>
+    <meta name="description" content="Search Tabler Icons, a free and open-source icon set. Filter by style, category, and more to find the perfect icon for your project.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Icon Search: Find Tabler Icons">
+    <meta property="og:description" content="Search Tabler Icons, a free and open-source icon set. Filter by style, category, and more to find the perfect icon for your project.">
+    <meta property="og:image" content="/assets/images/card.png">
+    <meta property="og:image:alt" content="Text reading 'Icon Search - Find any Tabler icon easily' below a search bar surrounded by icons.">
+    <meta property="og:url" content="https://iconsearch.app/">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Icon Search: Find Tabler Icons">
+    <meta name="twitter:description" content="Search Tabler Icons, a free and open-source icon set. Filter by style, category, and more to find the perfect icon for your project.">
+    <meta name="twitter:image" content="/assets/images/card.png">
+    <meta name="twitter:image:alt" content="Text reading 'Icon Search - Find any Tabler icon easily' below a search bar surrounded by icons.">
+
+    <!-- Scripts -->
+    <script>
+        (() => {
+            let theme = localStorage.getItem('preferences.theme')?.replaceAll('"', '')?.trim()?.toLowerCase() ?? '';
+            if (theme !== 'dark' && theme !== 'light') {
+                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.classList.add(theme);
+        })();
+    </script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="953a5b88-2104-43b9-93dd-2e169c3607ae"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="header-section">
+            <img src="/assets/images/icon.svg" alt="">
+            <h1>Icon Search</h1>
+        </a>
+        <div class="header-section">
+            <a href="https://patreon.com/JonCorey" target="_blank" rel="noopener noreferrer" aria-label="Patreon" class="icon-only-button tooltip-hover-container">
+                <svg class="icon icon-outline" viewBox="0 0 24 24">
+                    <path d="M20 8.408c-.003 -2.299 -1.746 -4.182 -3.79 -4.862c-2.54 -.844 -5.888 -.722 -8.312 .453c-2.939 1.425 -3.862 4.545 -3.896 7.656c-.028 2.559 .22 9.297 3.92 9.345c2.75 .036 3.159 -3.603 4.43 -5.356c.906 -1.247 2.071 -1.599 3.506 -1.963c2.465 -.627 4.146 -2.626 4.142 -5.273" />
+                </svg>
+                <div class="tooltip">Patreon</div>
+            </a>
+            <a href="https://github.com/Jon-Corey/IconSearch" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repo" class="icon-only-button tooltip-hover-container">
+                <svg class="icon icon-outline" viewBox="0 0 24 24">
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                </svg>
+                <div class="tooltip">GitHub Repo</div>
+            </a>
+            <button type="button" id="theme-toggle" aria-label="Toggle Theme" class="icon-only-button tooltip-hover-container">
+                <svg class="icon icon-outline dark-only" viewBox="0 0 24 24">
+                    <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                </svg>
+                <svg class="icon icon-outline light-only" viewBox="0 0 24 24">
+                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" />
+                </svg>
+                <div class="tooltip">Toggle Theme</div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-area">
+            <div class="primary-row">
+                <label for="search-input">Search:</label>
+                <input type="text" id="search-input" placeholder="Search for icons..." autofocus>
+            </div>
+
+            <div>
+                <label for="style-filter">Style:</label>
+                <div class="select-wrapper">
+                    <select id="style-filter">
+                        <option value="">All Styles</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label for="category-filter">Category:</label>
+                <div class="select-wrapper">
+                    <select id="category-filter">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+                <label><input type="checkbox" id="brand-filter"> Filter out brand icons</label>
+            </div>
+        </div>
+
+        <div id="results">
+            <!-- 100 placeholders since the page size is 100 -->
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+            <div class="result-item-placeholder"></div>
+        </div>
+
+        <nav aria-label="Search Results Pagination">
+            <ol id="pagination">
+                <li>
+                    <button type="button" id="previous-button" aria-label="Previous Page" disabled>
+                        <svg class="icon icon-outline" viewBox="0 0 24 24">
+                            <path d="M15 6l-6 6l6 6" />
+                        </svg>
+                        <span class="pagination-text">Previous</span>
+                    </button>
+                </li>
+                <li class="page-status">
+                    <span id="page-status">1 / 1</span>
+                </li>
+                <li>
+                    <button type="button" id="next-button" aria-label="Next Page" disabled>
+                        <span class="pagination-text">Next</span>
+                        <svg class="icon icon-outline" viewBox="0 0 24 24">
+                            <path d="M9 6l6 6l-6 6" />
+                        </svg>
+                    </button>
+                </li>
+            </ol>
+        </nav>
+
+        <div id="details-modal" style="display: none;" hidden>
+            <div id="details-modal-background"></div>
+            <div class="modal">
+                <button type="button" id="details-close-button" aria-label="Close Details Modal" class="icon-only-button">
+                    <svg class="icon icon-outline" viewBox="0 0 24 24">
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </button>
+                <div id="details-icon"></div>
+                <div>
+                    <h2 id="details-name"></h2>
+                    <p class="category">Category: <span id="details-category"></span></p>
+                    <p class="version">Added in: <span id="details-version"></span></p>
+                    <div id="details-tags"></div>
+                    <a href=https://tabler.io/icons/icon/ target="_blank" rel="noopener noreferrer" id="details-link">
+                        View on Tabler
+                        <svg class="icon icon-outline" viewBox="0 0 24 24">
+                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                            <path d="M11 13l9 -9" />
+                            <path d="M15 4h5v5" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="export-format-section">
+                    <label for="export-format">Format</label>
+                    <div class="control-group">
+                        <div class="select-wrapper">
+                            <select id="export-format">
+                                <option value="SVG">SVG</option>
+                            </select>
+                        </div>
+                        <button type="button" id="copy-button" class="tooltip-button">
+                            <svg class="icon icon-outline" viewBox="0 0 24 24">
+                                <path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" />
+                                <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                            </svg>
+                            Copy
+                            <div class="tooltip">
+                                <svg class="icon icon-outline success" viewBox="0 0 24 24">
+                                    <path d="M5 12l5 5l10 -10" />
+                                </svg>
+                                Copied
+                            </div>
+                        </button>
+                        <button type="button" id="download-button" class="tooltip-button">
+                            <svg class="icon icon-outline" viewBox="0 0 24 24">
+                                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                <path d="M7 11l5 5l5 -5" />
+                                <path d="M12 4l0 12" />
+                            </svg>
+                            Download
+                            <div class="tooltip">
+                                <svg class="icon icon-outline success" viewBox="0 0 24 24">
+                                    <path d="M5 12l5 5l10 -10" />
+                                </svg>
+                                Downloaded
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="export-style-section">
+                    <fieldset id="export-style">
+                        <legend>Style</legend>
+                    </fieldset>
+                    <div id="export-stroke-width-container">
+                        <label for="export-stroke-width">Stroke Width</label>
+                        <div class="control-group">
+                            <input type="range" id="export-stroke-width" min="0.5" max="3" value="2" step="0.25">
+                            <output id="export-stroke-width-output">2</output>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="export-color">Color</label>
+                        <div class="color-input-group">
+                            <input type="color" id="export-color" value="#ffffff">
+                            <span id="export-color-value">CurrentColor</span>
+                            <button type="button" id="export-color-reset" aria-label="Reset Color to CurrentColor" class="tooltip-hover-container">
+                                <svg class="icon icon-outline" viewBox="0 0 24 24">
+                                    <path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747" />
+                                    <path d="M20 4v5h-5" />
+                                </svg>
+                                <div class="tooltip">
+                                    Reset Color to Current<wbr />Color
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="export-svg-options-container">
+                    <fieldset>
+                        <legend>SVG Export Options</legend>
+                        <label><input type="checkbox" id="export-svg-whitespace"> Remove Extra Whitespace</label>
+                        <label><input type="checkbox" id="export-svg-styles"> Remove Inline Styles</label>
+                        <label><input type="checkbox" id="export-svg-xmlns"> Remove <code>xmlns</code> Attribute</label>
+                        <label><input type="checkbox" id="export-svg-icon-class"> Add "icon" Class</label>
+                        <label><input type="checkbox" id="export-svg-tabler-classes"> Add Tabler Classes</label>
+                        <label><input type="checkbox" id="export-svg-custom-classes-enabled"> Add Custom Classes</label>
+                    </fieldset>
+                    <div id="export-svg-custom-classes-container">
+                        <label for="export-svg-custom-classes" class="tooltip-hover-container">
+                            Custom Classes
+                            <svg class="icon icon-outline" viewBox="0 0 24 24">
+                                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                <path d="M12 9h.01" />
+                                <path d="M11 12h1v4h1" />
+                            </svg>
+                            <div class="tooltip">
+                                A space separated list of classes to add to the exported SVG. You can use <code>{style}</code> and <code>{name}</code> as placeholders for the icon's style and name, respectively.
+                            </div>
+                        </label>
+                        <input type="text" id="export-svg-custom-classes" placeholder="icon-{style} icon-{name}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; Jon<wbr />Corey<wbr />.Dev <span id="current-year">2026</span>&ensp;-&ensp;<a href="/privacy-policy">Privacy Policy</a></p>
+        <p><em class="small">Tabler Icons Version: <a href="https://tabler.io/changelog" target="_blank" rel="noopener noreferrer" id="tabler-icons-version">Loading...</a></em></p>
+        <p><em class="small">Icon Search is not affiliated with or endorsed by Tabler. "Tabler" is a trademark of its respective owner.</em></p>
+    </footer>
+
+    <script src="/assets/js/app.js" type="module"></script>
+    <script src="/assets/js/icons.js" type="module"></script>
+</body>
+</html>

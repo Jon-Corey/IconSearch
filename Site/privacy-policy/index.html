@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/images/icon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icon-180.png">
+
+    <link rel="stylesheet" href="/assets/css/site.css">
+
+    <title>Privacy Policy</title>
+    <meta name="description" content="Read the privacy policy for Icon Search, a tool to search Tabler Icons. Learn about the data we collect, how we use it, and your rights regarding your personal information.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Icon Search Privacy Policy">
+    <meta property="og:description" content="Read the privacy policy for Icon Search, a tool to search Tabler Icons. Learn about the data we collect, how we use it, and your rights regarding your personal information.">
+    <meta property="og:image" content="/assets/images/card.png">
+    <meta property="og:image:alt" content="Text reading 'Icon Search - Find any Tabler icon easily' below a search bar surrounded by icons.">
+    <meta property="og:url" content="https://iconsearch.app/privacy-policy/">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Icon Search Privacy Policy">
+    <meta name="twitter:description" content="Read the privacy policy for Icon Search, a tool to search Tabler Icons. Learn about the data we collect, how we use it, and your rights regarding your personal information.">
+    <meta name="twitter:image" content="/assets/images/card.png">
+    <meta name="twitter:image:alt" content="Text reading 'Icon Search - Find any Tabler icon easily' below a search bar surrounded by icons.">
+
+    <!-- Scripts -->
+    <script>
+        (() => {
+            let theme = localStorage.getItem('preferences.theme')?.replaceAll('"', '')?.trim()?.toLowerCase() ?? '';
+            if (theme !== 'dark' && theme !== 'light') {
+                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.classList.add(theme);
+        })();
+    </script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="953a5b88-2104-43b9-93dd-2e169c3607ae"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="header-section">
+            <img src="/assets/images/icon.svg" alt="">
+            <h1>Icon Search</h1>
+        </a>
+        <div class="header-section">
+            <a href="https://patreon.com/JonCorey" target="_blank" rel="noopener noreferrer" aria-label="Patreon" class="icon-only-button tooltip-hover-container">
+                <svg class="icon icon-outline" viewBox="0 0 24 24">
+                    <path d="M20 8.408c-.003 -2.299 -1.746 -4.182 -3.79 -4.862c-2.54 -.844 -5.888 -.722 -8.312 .453c-2.939 1.425 -3.862 4.545 -3.896 7.656c-.028 2.559 .22 9.297 3.92 9.345c2.75 .036 3.159 -3.603 4.43 -5.356c.906 -1.247 2.071 -1.599 3.506 -1.963c2.465 -.627 4.146 -2.626 4.142 -5.273" />
+                </svg>
+                <div class="tooltip bottom-tooltip">Patreon</div>
+            </a>
+            <a href="https://github.com/Jon-Corey/IconSearch" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repo" class="icon-only-button tooltip-hover-container">
+                <svg class="icon icon-outline" viewBox="0 0 24 24">
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                </svg>
+                <div class="tooltip bottom-tooltip">GitHub Repo</div>
+            </a>
+            <button type="button" id="theme-toggle" aria-label="Toggle Theme" class="icon-only-button tooltip-hover-container">
+                <svg class="icon icon-outline dark-only" viewBox="0 0 24 24">
+                    <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                </svg>
+                <svg class="icon icon-outline light-only" viewBox="0 0 24 24">
+                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" />
+                </svg>
+                <div class="tooltip bottom-tooltip">Toggle Theme</div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <a href="/">
+            <svg class="icon icon-outline" viewBox="0 0 24 24">
+                <path d="M15 6l-6 6l6 6" />
+            </svg>
+            Return to Home Page
+        </a>
+
+        <h2>Privacy Policy</h2>
+
+        <p>This privacy policy will explain how Icon Search uses the personal data we collect from you when you use this website.</p>
+
+        <p>Topics:</p>
+
+        <ul>
+            <li><a href="#what-data-do-we-collect">What data do we collect?</a></li>
+            <li><a href="#how-do-we-collect-your-data">How do we collect your data?</a></li>
+            <li><a href="#how-will-we-use-your-data">How will we use your data?</a></li>
+            <li><a href="#how-do-we-store-your-data">How do we store your data?</a></li>
+            <li><a href="#marketing">Marketing</a></li>
+            <li><a href="#what-are-your-data-protection-rights">What are your data protection rights?</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+            <li><a href="#browser-storage">Browser Storage</a></li>
+            <li><a href="#privacy-policies-of-other-websites">Privacy policies of other websites</a></li>
+            <li><a href="#changes-to-our-privacy-policy">Changes to our privacy policy</a></li>
+            <li><a href="#how-to-contact-us">How to contact us</a></li>
+        </ul>
+
+        <h3 id="what-data-do-we-collect">What data do we collect?</h3>
+
+        <p>Icon Search collects the following data:</p>
+
+        <ul>
+            <li>Your activity on this site</li>
+            <li>Your device type and browser info</li>
+            <li>Your general location (as specific as the city)</li>
+        </ul>
+
+        <p>This data is collected by <a href="https://umami.is" target="_blank" rel="noopener noreferrer">Umami</a>, an analytics platform. Your data is anonymized and does not contain personal information.</p>
+
+        <h3 id="how-do-we-collect-your-data">How do we collect your data?</h3>
+
+        <p>Icon Search uses <a href="https://umami.is" target="_blank" rel="noopener noreferrer">Umami</a>, which collects your data while you use this site.</p>
+
+        <h3 id="how-will-we-use-your-data">How will we use your data?</h3>
+
+        <p>Icon Search collects your data so that we can:</p>
+
+        <ul>
+            <li>Analyze user behavior for the purpose of improving the content of this site</li>
+        </ul>
+
+        <h3 id="how-do-we-store-your-data">How do we store your data?</h3>
+
+        <p>Your data is stored securely by <a href="https://umami.is" target="_blank" rel="noopener noreferrer">Umami</a> using their Umami Cloud service.</p>
+
+        <h3 id="marketing">Marketing</h3>
+
+        <p>Icon Search does not send marketing-related communications.</p>
+
+        <h3 id="what-are-your-data-protection-rights">What are your data protection rights?</h3>
+
+        <p>Icon Search does not collect your personal information or use cookies. Because no identifiable data is collected, we are unable to provide, delete, or modify any personal data related to you. If you have questions about privacy or data use on this site, please contact us at <a href="mailto:help@joncorey.dev">help@joncorey.dev</a>.</p>
+
+        <h3 id="cookies">Cookies</h3>
+
+        <p>Cookies are text files placed on your computer to collect standard Internet log information and visitor behavior information. Icon Search does not use cookies.</p>
+
+        <h3 id="browser-storage">Browser Storage</h3>
+
+        <p>Icon Search uses your browser's Local Storage to save your theme preference (light or dark mode), export settings, and other preferences related to the functionality of the site. This information never leaves your device and is not shared or transmitted to our servers or any third parties.</p>
+
+        <h3 id="privacy-policies-of-other-websites">Privacy policies of other websites</h3>
+
+        <p>The Icon Search website contains links to other websites. Our privacy policy applies only to our website, so if you click on a link to another website, you should read their privacy policy.</p>
+
+        <h3 id="changes-to-our-privacy-policy">Changes to our privacy policy</h3>
+
+        <p>Icon Search keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 20 March 2026.</p>
+
+        <h3 id="how-to-contact-us">How to contact us</h3>
+
+        <p>If you have any questions about Icon Search's privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us.</p>
+
+        <p>Email us at: <a href="mailto:help@joncorey.dev">help@joncorey.dev</a></p>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; Jon<wbr />Corey<wbr />.Dev <span id="current-year">2026</span>&ensp;-&ensp;<a href="/privacy-policy">Privacy Policy</a></p>
+        <p><em class="small">Icon Search is not affiliated with or endorsed by Tabler. "Tabler" is a trademark of its respective owner.</em></p>
+    </footer>
+
+    <script src="/assets/js/app.js" type="module"></script>
+</body>
+</html>
