@@ -121,9 +121,3 @@ When a new version of [Tabler Icons](https://github.com/tabler/tabler-icons) is 
 2. Check the [changelog](https://github.com/tabler/tabler-icons/releases) to ensure that there aren't any changes that would break this site (such as changes to how/where the icon data is stored).
 3. Look at the name and tags of any new icons (not new styles of existing icons) and determine if there is a common search term that wouldn't result in this icon being included in the search result (such as symbols (+, -, etc.) or the expanded form of an acronym ("VIP" -> "very", "important", "person")). If that is the case, add that search term to `override-tags.json`.
 4. Run this site locally and test to make sure nothing broke.
-
-## To Do
-
-### V1
-
-- [ ] Update GitHub link to point to the repo
