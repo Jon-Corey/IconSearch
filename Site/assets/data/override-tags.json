@@ -423,6 +423,7 @@
     "progress-help": ["?"],
     "pyramid-plus": ["+"],
     "quote-off": ["\"", "“", "”"],
+    "quote-open": ["\"", "“", "”"],
     "quote": ["\"", "“", "”"],
     "quotes": ["\"\"", "“”"],
     "rating-12-plus": ["12+"],

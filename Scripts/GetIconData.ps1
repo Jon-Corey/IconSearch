@@ -89,7 +89,7 @@ try {
     }
 
     $iconsDir = Join-Path $extractedDir.FullName 'icons'
-    $styleDirs = Get-ChildItem -Path $iconsDir -Directory
+    $styleDirs = Get-ChildItem -Path $iconsDir -Directory | Sort-Object -Property Name
 
     # Use a map keyed by icon name for fast merges across styles
     $iconsByName = @{}
@@ -107,7 +107,7 @@ try {
                     name = $iconName
                     category = ""
                     tags = @()
-                    styles = @{}
+                    styles = [ordered]@{}
                 }
             }
 
