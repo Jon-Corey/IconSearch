@@ -247,6 +247,7 @@
     "gauge-off": ["speedometer", "tachometer"],
     "gauge": ["speedometer", "tachometer"],
     "gavel": ["judge"],
+    "hammer-drill": ["jackhammer"],
     "hash": ["pound", "number"],
     "heart-exclamation": ["!"],
     "heart-minus": ["-"],
