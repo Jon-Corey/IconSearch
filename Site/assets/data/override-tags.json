@@ -102,6 +102,7 @@
     "cloud-minus": ["-"],
     "cloud-plus": ["+"],
     "cloud-question": ["?"],
+    "code-ai": ["</>"],
     "code-asterisk": ["{*}"],
     "code-circle-2": ["</>"],
     "code-circle": ["<>"],
