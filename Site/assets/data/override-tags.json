@@ -118,6 +118,8 @@
     "coin-off": ["$"],
     "coin-pound": ["£"],
     "coin": ["$"],
+    "color-picker-off": ["eyedropper"],
+    "color-picker": ["eyedropper"],
     "cone-plus": ["+"],
     "copy-minus": ["-"],
     "copy-plus": ["+"],
