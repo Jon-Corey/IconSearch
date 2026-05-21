@@ -513,7 +513,6 @@ function getDisplayResults() {
 function prepareSvgForDisplay(svg, style) {
     // Remove inline styles
     let preparedSvg = svg;
-    preparedSvg = removeInlineStylesFromSvg(preparedSvg);
     preparedSvg = removeXmlnsFromSvg(preparedSvg);
 
     // Add class for CSS styling
