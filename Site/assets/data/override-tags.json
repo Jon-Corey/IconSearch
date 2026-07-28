@@ -548,6 +548,10 @@
     "table-plus": ["+"],
     "tag-minus": ["-"],
     "tag-plus": ["+"],
+    "tags-chevron-down": ["double", "arrows"],
+    "tags-chevron-left": ["double", "arrows"],
+    "tags-chevron-right": ["double", "arrows"],
+    "tags-chevron-up": ["double", "arrows"],
     "tax-euro": ["€"],
     "tax-pound": ["£"],
     "tax": ["$"],
@@ -574,6 +578,7 @@
     "transaction-dollar": ["$"],
     "transaction-euro": ["€"],
     "transaction-pound": ["£"],
+    "treasure-chest": ["trunk"],
     "triangle-minus-2": ["-"],
     "triangle-minus": ["-"],
     "triangle-plus-2": ["+"],
@@ -601,6 +606,7 @@
     "world-minus": ["-"],
     "world-plus": ["+"],
     "world-question": ["?"],
+    "yarn": ["string", "twine"],
     "zoom-exclamation": ["!"],
     "zoom-money": ["$"]
 }
