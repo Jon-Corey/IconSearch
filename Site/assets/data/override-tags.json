@@ -364,6 +364,7 @@
     "math-y-minus-y": ["y-y", "-"],
     "math-y-plus-y": ["y+y", "+"],
     "math": ["square", "root"],
+    "memory": ["stick", "module"],
     "message-2-exclamation": ["!"],
     "message-2-minus": ["-"],
     "message-2-plus": ["+"],
