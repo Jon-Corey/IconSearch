@@ -529,6 +529,8 @@
     "shovel": ["dig"],
     "signal-4g-plus": ["4g+"],
     "signal-h-plus": ["h+"],
+    "sitemap-minus": ["-"],
+    "sitemap-plus": ["+"],
     "slash": ["/"],
     "slashes": ["//"],
     "slideshow": ["image"],
